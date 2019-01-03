@@ -13,6 +13,8 @@ RUN yum install -y git tar zip unzip which java-1.8.0-openjdk-devel && \
     curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
       && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
       && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+      && mkdir -p /home/testslave
+      && chmod -R 777 /home /home/testslave
 
 # Copy script
 COPY jenkins-slave.sh /opt/jenkins-slave/bin/
