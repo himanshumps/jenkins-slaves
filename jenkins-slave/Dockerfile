@@ -5,6 +5,7 @@ ENV JNLP_SLAVE_VERSION 2.52
 ENV HOME /opt/jenkins-slave
 ENV MAVEN_VERSION 3.3.3
 ENV JAVA_HOME /usr/lib/jvm/java
+ENV MAVEN_HOME /usr/share/maven/
 
 RUN yum install -y git tar zip unzip which java-1.8.0-openjdk-devel && \
     yum clean all && \
