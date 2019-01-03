@@ -11,4 +11,4 @@ sed -i "s/${JENKINS_ROUTE_URL}/${JENKINS_SERVICE_URL}/g" $HOME/agentJnlpFile.jnl
 echo "File after replacement"
 cat $HOME/agentJnlpFile.jnlp
 echo "java -jar $JAR -jnlpUrl \"file:$HOME/agentJnlpFile.jnlp\""
-java $JAR slave.jar -jnlpUrl "file:$HOME/agentJnlpFile.jnlp"
+exec java -jar $JAR -jnlpUrl "file:$HOME/agentJnlpFile.jnlp"
