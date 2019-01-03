@@ -7,7 +7,7 @@ curl -o $HOME/agentJnlpFile.jnlp ${JNLP_URL}
 # Do the replacement
 echo "File before replacement"
 cat $HOME/agentJnlpFile.jnlp
-sed -i "s/${JENKINS_ROUTE_URL}/${JENKINS_SERVICE_URL}/g" test.jnlp $HOME/agentJnlpFile.jnlp
+sed -i "s/${JENKINS_ROUTE_URL}/${JENKINS_SERVICE_URL}/g" $HOME/agentJnlpFile.jnlp
 echo "File after replacement"
 cat $HOME/agentJnlpFile.jnlp
 echo "java -jar $JAR -jnlpUrl \"file:$HOME/agentJnlpFile.jnlp\""
